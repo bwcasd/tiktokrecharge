@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 20px;
+        }
+        .receipt {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: left;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1c1c1c;
+        }
+        .details {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #ff5e5e;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .footer {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt">
+        <div class="header">
+            TikTok Payment Confirmation
+        </div>
+        <div class="details">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username" />
+        </div>
+        <div class="details">
+            <p>Amount Charged: <strong>$799.99</strong></p>
+            <p>Coins Purchased: <strong>100,000 TikTok Coins</strong></p>
+            <p>Date: <strong id="date"></strong></p>
+        </div>
+        <button class="btn" onclick="window.location.reload();">Refund</button>
+        <div class="footer">
+            <p>If you have any questions, contact TikTok support.</p>
+        </div>
+    </div>
+
+    <script>
+        // Set current date/time
+        document.getElementById("date").innerText = new Date().toLocaleString();
+    </script>
+</body>
+</html>
