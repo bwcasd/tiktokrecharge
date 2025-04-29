@@ -1,1 +1,12 @@
 gem install bundler jekyll
+cd my-jekyll-site
+layout: post
+title: "My First Post"
+date: 2025-04-29
+bundle exec jekyll serve
+git init
+git add .
+git commit -m "Initial Jekyll commit"
+git branch -M main
+git remote add origin https://github.com/yourusername/your-repo-name.git
+git push -u origin main
